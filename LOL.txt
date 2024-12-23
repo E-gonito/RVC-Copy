@@ -1,0 +1,3 @@
+& "C:\Users\errol\AppData\Local\pypoetry\Cache\virtualenvs\rvc-beta-mNhLC9aH-py3.10\Scripts\Activate.ps1"
+poetry install
+python infer-web.py

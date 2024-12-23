@@ -53,6 +53,8 @@ torch.manual_seed(114514)
 config = Config()
 vc = VC(config)
 
+# Ensure the script uses the GPU if available
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 if config.dml == True:
 
@@ -1609,11 +1611,12 @@ with gr.Blocks(title="RVC WebUI") as app:
                 gr.Markdown(traceback.format_exc())
 
     if config.iscolab:
-        app.queue(concurrency_count=511, max_size=1022).launch(share=True)
+        app.queue(max_size=1022).launch(share=True)
     else:
-        app.queue(concurrency_count=511, max_size=1022).launch(
+        app.queue(max_size=1022).launch(
             server_name="0.0.0.0",
             inbrowser=not config.noautoopen,
             server_port=config.listen_port,
             quiet=True,
         )
+
