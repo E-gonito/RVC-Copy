@@ -3,7 +3,7 @@ Copy of the [RVC-Project](https://github.com/RVC-Project) modified for compatibi
 
 ## Usage
 
-Open your terminal or PowerShell in the project directory, then run:
+After following the instructions of original-README.md for RVC WebUI, Open your terminal or PowerShell in the project directory, then run:
 
 ```powershell
 & "C:\Users\'UserName'\AppData\Local\pypoetry\Cache\virtualenvs\rvc-beta-mNhLC9aH-py3.10\Scripts\Activate.ps1"
